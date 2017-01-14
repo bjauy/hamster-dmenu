@@ -14,8 +14,8 @@
 #
 
 # Paths to utilities
-hamster='/usr/bin/hamster-time-tracker'
-hamstercli='/usr/bin/hamster-cli'
+hamster='/usr/bin/hamster'
+hamstercli='/usr/bin/hamster'
 dmenu='/usr/bin/dmenu'
 notify='/usr/bin/notify-send hamster'
 notifycrit='/usr/bin/notify-send -u critical hamster'
@@ -38,11 +38,11 @@ fi
 if [ -f "${cache}" ]
 then
     cache_content=`cat ${cache}`
-    entries=${cache_content}\\n`${hamstercli} list-activities`
+    entries=${cache_content}\\n`${hamstercli} activities`
     # Ensure each entry is unique and remove blank lines
     entries=`${echo_with_nl}  "${entries}" | ${make_unique} | ${remove_empty_lines}`
 else
-    entries=`${hamstercli} list-activities`
+    entries=`${hamstercli} activities`
 fi
 
 # Get prompt

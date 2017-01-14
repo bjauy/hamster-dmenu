@@ -17,7 +17,7 @@ You can enter a new task, or rely on the auto-completion to find a previous task
 
 ## Installation
 
-**hamster-dmenu** is a shell script and depends on `hamster-cli`, `dmenu`, `notify-send`, `sed` and `awk`.
+**hamster-dmenu** is a shell script and depends on `hamster`, `dmenu`, `notify-send`, `sed` and `awk`.
 
 Just download the `hamster-dmenu` script and invoke it with parameters you want to pass to *dmenu* (You probably will want `-i` for case insensitive.). Here is how I invoke it:
 
